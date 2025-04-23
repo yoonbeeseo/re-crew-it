@@ -1,0 +1,25 @@
+{
+  "React Function Component": {
+    "prefix": "afce",
+    "body": [
+      "export default function ${0:${TM_FILENAME_BASE}} (){",
+      "\treturn (",
+      "\t\t<div>${0:${TM_FILENAME_BASE}}</div>",
+      "\t)",
+      "}"
+    ]
+  },
+  "React Function Component with Type": {
+    "prefix": "tafce",
+    "body": [
+      "type ${2:Props} = {",
+      "\t${0}",
+      "}\n",
+      "export default function ${1:${TM_FILENAME_BASE}} (){",
+      "\treturn (",
+      "\t\t<div>${1:${TM_FILENAME_BASE}}</div>",
+      "\t)",
+      "}"
+    ]
+  }
+}
