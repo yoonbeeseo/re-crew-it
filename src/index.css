@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+@theme {
+  --color-theme: var(--color-sky-400);
+  --color-border: var(--color-gray-200);
+}
+
+@layer base {
+  div,
+  ul {
+    @apply flex flex-col;
+  }
+
+  button,
+  a {
+    @apply flex justify-center items-center gap-2 cursor-pointer hover:opacity-80 active:opacity-50 transition;
+  }
+}
+
+@layer components {
+  .con {
+    @apply max-w-225 mx-auto w-full;
+  }
+}
+
+@keyframes emergeFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes emergeFromBottom {
+  from {
+    transform: translateY(100px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.emerge.right {
+  animation: emergeFromRight 0.5s ease;
+}
+
+.emerge.bottom {
+  animation: emergeFromBottom 1s ease;
+}
