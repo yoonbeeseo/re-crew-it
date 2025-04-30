@@ -18,8 +18,8 @@ export default function useModal() {
             {...props}
             open
             className={twMerge(
-              props?.className ??
-                "z-50 size-full bg-black/10 flex justify-center items-center"
+              "z-50 size-full flex justify-center items-center fixed top-0 left-0 bg-black/10",
+              props?.className
             )}
           >
             <div className={twMerge("emerge bottom", contentClassName)}>

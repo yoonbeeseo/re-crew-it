@@ -18,6 +18,7 @@ type Props = {
   label?: string;
   message?: string | null;
   onChangeText: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  resetShown?: boolean;
 } & ComponentProps<"input">;
 
 export default function useTextInput() {
@@ -47,6 +48,7 @@ export default function useTextInput() {
       messageClassName,
       message,
       onChangeText,
+      resetShown,
       ...props
     }: Props) => {
       return (
@@ -61,7 +63,8 @@ export default function useTextInput() {
                   focused ||
                     (typeof props?.value === "string" &&
                       props?.value?.length > 0) ||
-                    (typeof props?.value === "number" && props.value > 0)
+                    (typeof props?.value === "number" && props.value > 0) ||
+                    props?.placeholder
                     ? "top-2"
                     : "top-[50%] translate-y-[-50%]",
                   labelClassName
@@ -77,8 +80,10 @@ export default function useTextInput() {
                 (focused ||
                   (typeof props?.value === "string" &&
                     props?.value?.length > 0) ||
-                  (typeof props?.value === "number" && props.value > 0)) &&
+                  (typeof props?.value === "number" && props.value > 0) ||
+                  props?.placeholder) &&
                   "pt-6",
+                resetShown === false && "pr-3",
                 props?.className
               )}
               onChange={(e) => {
@@ -102,19 +107,21 @@ export default function useTextInput() {
               }}
               ref={ref}
             />
-            <label
-              htmlFor={props?.id ?? id}
-              className={twMerge(
-                "absolute z-1 top-[50%] right-2 size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 text-xs cursor-pointer hover:opacity-80 active:opacity-50 translate-y-[-50%]",
-                spanClassName
-              )}
-              onClick={() => {
-                onChangeText("");
-                focus();
-              }}
-            >
-              <LuX />
-            </label>
+            {resetShown !== false && (
+              <label
+                htmlFor={props?.id ?? id}
+                className={twMerge(
+                  "absolute z-1 top-[50%] right-2 size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 text-xs cursor-pointer hover:opacity-80 active:opacity-50 translate-y-[-50%]",
+                  spanClassName
+                )}
+                onClick={() => {
+                  onChangeText("");
+                  focus();
+                }}
+              >
+                <LuX />
+              </label>
+            )}
           </div>
           {message &&
             ((typeof props?.value === "string" && props?.value?.length > 0) ||

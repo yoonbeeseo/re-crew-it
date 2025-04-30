@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider, RouteObject } from "react-router";
 import { Suspense, lazy, useMemo } from "react";
+import { useAuth } from "./contexts/auth.context";
 
 const Home = lazy(() => import("./app/Home"));
 const Crew = lazy(() => import("./app/Crew"));
@@ -12,8 +13,8 @@ const NotFound = lazy(() => import("./app/NotFound"));
 const AppLayout = lazy(() => import("./components/features/AppLayout"));
 
 export default function AppRouter() {
+  const { user } = useAuth();
   const children = useMemo<RouteObject[]>(() => {
-    const user = null;
     const SharedChildren: RouteObject[] = [
       { index: true, Component: Home },
       { path: "crew", Component: Crew },
@@ -41,7 +42,7 @@ export default function AppRouter() {
       routes.push({ path: "signup", Component: Signup });
     }
     return routes;
-  }, []);
+  }, [user]);
 
   const router = createBrowserRouter([
     {

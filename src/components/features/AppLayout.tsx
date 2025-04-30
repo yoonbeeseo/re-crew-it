@@ -146,7 +146,7 @@ export default function AppLayout({ user }: Props) {
       <Login.Modal>
         <LoginBox hide={Login.hide} />
       </Login.Modal>
-      <main className="pt-15 con">
+      <main className="con h-screen">
         <Outlet />
       </main>
     </>

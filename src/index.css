@@ -21,6 +21,10 @@
   .con {
     @apply max-w-225 mx-auto w-full;
   }
+
+  .submit {
+    @apply bg-theme mt-2 h-12 rounded-full text-white;
+  }
 }
 
 @keyframes emergeFromRight {
