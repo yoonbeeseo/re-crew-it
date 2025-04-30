@@ -10,6 +10,12 @@ export default function AuthProvider({ children }: PropsWithChildren) {
       return { success: false, message: "존재하지 않는 유저입니다." };
     }
     const fetchedUsers = (await res.json()) as User[];
+    if (fetchedUsers.length === 0) {
+      return { success: false, message: "존재하지 않는 유저입니다." };
+    }
+    if (fetchedUsers.length === 0) {
+      return { success: false, message: "존재하지 않는 유저입니다." };
+    }
     const { password: pwd, ...data } = fetchedUsers[0];
     if (pwd !== password) {
       return { success: false, message: "비밀번호가 일치하지 않습니다." };
@@ -58,7 +64,7 @@ export default function AuthProvider({ children }: PropsWithChildren) {
     if (user) {
       const fetchFn = async () => {
         const res = await fetch(`/api/users/${user.id}`);
-        const data = await res.json();
+        const { password, ...data } = await res.json();
 
         return data;
       };
