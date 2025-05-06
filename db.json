@@ -28122,5 +28122,21 @@
     },
     "id": 1,
     "value": 995
-  }
+  },
+  "resumes": [
+    {
+      "id": "46405b1a-cb10-4b45-b83f-5f6235b97e3b",
+      "company": "버기 해적단",
+      "endDate": "현재까지",
+      "job": "개발자",
+      "skills": [
+        "ReactJs",
+        "React Native",
+        "Figma",
+        "AdobeXD"
+      ],
+      "startDate": "2025. 4. 30.",
+      "uid": "f9d1066b-a3c9-49ee-bd7b-2081847cdea7"
+    }
+  ]
 }

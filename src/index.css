@@ -55,3 +55,11 @@
 .emerge.bottom {
   animation: emergeFromBottom 1s ease;
 }
+
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide > div {
+  @apply h-full;
+}

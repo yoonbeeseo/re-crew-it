@@ -1,3 +1,3 @@
 export default function Individual() {
-  return <div>Individual</div>;
+  return <div>Individual</div>
 }

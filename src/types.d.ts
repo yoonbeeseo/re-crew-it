@@ -1,27 +1,20 @@
 type User = {
-  id: string;
-  name: string;
-  email: string;
-  password: string;
-  created_at: Date;
-  imgUrl: string | null;
-  job: UserJob | "";
-  location: UserLocation | "";
-  lookingFor: UserJob[];
-  skills: string[];
-  crew: string | null;
-};
+  id: string
+  name: string
+  email: string
+  password: string
+  created_at: Date
+  imgUrl: string | null
+  job: UserJob | ""
+  location: UserLocation | ""
+  lookingFor: UserJob[]
+  skills: string[]
+  crew: string | null
+}
 
-const jobs = [
-  "대표",
-  "개발자",
-  "디자이너",
-  "마케터",
-  "운영자",
-  "기획자",
-] as const;
+const jobs = ["대표", "개발자", "디자이너", "마케터", "운영자", "기획자"] as const
 
-type UserJob = (typeof jobs)[number];
+type UserJob = (typeof jobs)[number]
 
 const locations = [
   "서울",
@@ -40,35 +33,37 @@ const locations = [
   "경기도",
   "강원도",
   "제주도",
-] as const;
+] as const
 
-type UserLocation = (typeof locations)[number];
+type UserLocation = (typeof locations)[number]
 
 type UserWithoutPassword = Omit<User, "password"> & {
-  resumes?: Resume[];
-};
+  resumes?: Resume[]
+}
 
 type Resume = {
-  company: string;
-  startDate: Date;
-  endDate: Date | "현재까지";
-  job: UserJob | "";
-  skills: string[];
-};
+  company: string
+  startDate: string
+  endDate: string | "현재까지"
+  job: UserJob | ""
+  skills: string[]
+  id: string //! resume 자체의 id 고유 식별자
+  uid: string //! 누가 작성했는지를 알기 위한 user의 id
+}
 
 type Post = {
-  body: string;
-  created_at: Date;
-  updated_at: Date;
-  uid: string;
-  title: string;
-  id: string; //! uuid
-  skills: string[];
-  due_at: string;
-};
+  body: string
+  created_at: Date
+  updated_at: Date
+  uid: string
+  title: string
+  id: string //! uuid
+  skills: string[]
+  due_at: string
+}
 
 type PromiseResult<T = any> = {
-  success: boolean;
-  message?: string;
-  data?: T;
-};
+  success: boolean
+  message?: string
+  data?: T
+}
