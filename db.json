@@ -24039,7 +24039,8 @@
           ],
           "startDate": "2025-04-25T04:12:56.106Z"
         }
-      ]
+      ],
+      "updated_at": 1746666932776
     },
     {
       "id": "f9d1066b-a3c9-49ee-bd7b-2081847cdea7",
@@ -28137,6 +28138,246 @@
       ],
       "startDate": "2025. 4. 30.",
       "uid": "f9d1066b-a3c9-49ee-bd7b-2081847cdea7"
+    },
+    {
+      "id": "f23317c2-745b-4d5e-a010-25a2267a33c4",
+      "company": "버기 해적단",
+      "endDate": "2025-04-30",
+      "job": "대표",
+      "skills": [
+        "리액트",
+        "자바스크립트",
+        "HTML/CSS"
+      ],
+      "startDate": "2025-04-01",
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a"
+    },
+    {
+      "id": "0886ba8c-67b2-4a15-a2ba-3d49bccf1bd9",
+      "company": "밀짚모자 해적단",
+      "endDate": "현재까지",
+      "job": "개발자",
+      "skills": [
+        "리액트",
+        "자바스크립트",
+        "HTML/CSS"
+      ],
+      "startDate": "2025-05-01",
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a"
+    },
+    {
+      "id": "bc0b96c7-7a0c-42c1-b79e-4065ab38afef",
+      "company": "빨간머리 해적단",
+      "endDate": "2025-03-31",
+      "job": "디자이너",
+      "skills": [
+        "리액트",
+        "자바스크립트",
+        "HTML/CSS"
+      ],
+      "startDate": "2025-03-01",
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a"
+    }
+  ],
+  "scraps": [
+    {
+      "id": "52b96c70-953c-457a-8b75-712359270466",
+      "data": {
+        "id": "339",
+        "name": "barboach",
+        "email": "barboach@pokemonapi.com",
+        "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/339.png",
+        "job": "디자이너",
+        "skills": [
+          "Figma",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "crew": null,
+        "lookingFor": [
+          "개발자",
+          "디자이너",
+          "기획자",
+          "마케터",
+          "운영자",
+          "대표"
+        ],
+        "location": "경북",
+        "created_at": "2025-04-22T06:30:41.431Z",
+        "tabIndex": -1,
+        "style": {
+          "width": "100%",
+          "display": "inline-block"
+        }
+      },
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a",
+      "saved_at": 1746582172229,
+      "type": "프리랜서"
+    },
+    {
+      "id": "1a396715-c1bf-4ee7-9a33-fdaea14d9197",
+      "data": {
+        "id": "60",
+        "name": "poliwag",
+        "email": "poliwag@pokemonapi.com",
+        "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+        "job": "대표",
+        "skills": [
+          "Figma",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "crew": "POLIWAG LTD",
+        "lookingFor": [
+          "개발자",
+          "디자이너",
+          "기획자",
+          "마케터",
+          "운영자",
+          "대표"
+        ],
+        "location": "충북",
+        "created_at": "2025-04-22T06:30:41.144Z",
+        "tabIndex": -1,
+        "style": {
+          "width": "100%",
+          "display": "inline-block"
+        }
+      },
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a",
+      "saved_at": 1746582618272,
+      "type": "크루"
+    },
+    {
+      "id": "6cd81940-0339-40e2-aad0-3a2c212f7773",
+      "data": {
+        "id": "505",
+        "name": "watchog",
+        "email": "watchog@pokemonapi.com",
+        "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png",
+        "job": "마케터",
+        "skills": [
+          "Figma",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "crew": null,
+        "lookingFor": [
+          "개발자",
+          "디자이너",
+          "기획자",
+          "마케터",
+          "운영자",
+          "대표"
+        ],
+        "location": "울산",
+        "created_at": "2025-04-22T06:30:41.605Z",
+        "tabIndex": -1,
+        "style": {
+          "width": "100%",
+          "display": "inline-block"
+        }
+      },
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a",
+      "saved_at": 1746584381882,
+      "type": "프리랜서"
+    },
+    {
+      "id": "93417ee0-a083-4832-a0e3-5ffb3e000574",
+      "data": {
+        "id": "956",
+        "name": "espathra",
+        "email": "espathra@pokemonapi.com",
+        "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/956.png",
+        "job": "대표",
+        "skills": [
+          "Figma",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "crew": "ESPATHRA LTD",
+        "lookingFor": [
+          "개발자",
+          "디자이너",
+          "기획자",
+          "마케터",
+          "운영자",
+          "대표"
+        ],
+        "location": "강원",
+        "created_at": "2025-04-22T06:30:42.052Z",
+        "tabIndex": -1,
+        "style": {
+          "width": "100%",
+          "display": "inline-block"
+        }
+      },
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a",
+      "saved_at": 1746584407069,
+      "type": "크루"
+    },
+    {
+      "id": "f773a3c4-c8d8-477b-9786-4fa1ce661536",
+      "data": {
+        "id": "169",
+        "name": "crobat",
+        "email": "crobat@pokemonapi.com",
+        "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png",
+        "job": "대표",
+        "skills": [
+          "Figma",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "crew": "CROBAT LTD",
+        "lookingFor": [
+          "개발자",
+          "디자이너",
+          "기획자",
+          "마케터",
+          "운영자",
+          "대표"
+        ],
+        "location": "경남",
+        "created_at": "2025-04-22T06:30:41.258Z",
+        "tabIndex": -1,
+        "style": {
+          "width": "100%",
+          "display": "inline-block"
+        }
+      },
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a",
+      "saved_at": 1746664474908,
+      "type": "크루"
+    },
+    {
+      "id": "7b87365a-a267-4f90-806c-2cba659f13ba",
+      "data": {
+        "id": "507",
+        "name": "herdier",
+        "email": "herdier@pokemonapi.com",
+        "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/507.png",
+        "job": "운영자",
+        "skills": [
+          "Figma",
+          "Photoshop",
+          "Illustrator"
+        ],
+        "crew": null,
+        "lookingFor": [
+          "개발자",
+          "디자이너",
+          "기획자",
+          "마케터",
+          "운영자",
+          "대표"
+        ],
+        "location": "광주",
+        "created_at": "2025-04-22T06:30:41.607Z"
+      },
+      "uid": "4e60cf72-a0d1-42bc-992f-c95aade4004a",
+      "saved_at": 1746666249228,
+      "type": "프리랜서"
     }
   ]
 }

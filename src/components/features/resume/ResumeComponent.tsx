@@ -1,20 +1,26 @@
-import { PropsWithChildren, createContext, useCallback, useEffect, useState } from "react"
-import RForm from "./RForm"
-import RList from "./RList"
-import { useAuth } from "../../../contexts/auth.context"
+import {
+  PropsWithChildren,
+  createContext,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+import RForm from "./RForm";
+import RList from "./RList";
+import { useAuth } from "../../../contexts/auth.context";
 
-type T = Resume
+type T = Resume;
 
 type Props = {
-  resume: T
-  onChangeR: (target: keyof T, value: any) => void
-  setPayload: (payload: T | null) => void
+  resume: T;
+  onChangeR: (target: keyof T, value: any) => void;
+  setPayload: (payload: T | null) => void;
 
-  resumes: T[]
-  onChangeResumes: (resumes: T[]) => void
+  resumes: T[];
+  onChangeResumes: (resumes: T[]) => void;
 
-  payload: null | T
-}
+  payload: null | T;
+};
 
 const initialState: Props = {
   onChangeR: () => {},
@@ -31,39 +37,40 @@ const initialState: Props = {
     uid: "",
   },
   payload: null,
-}
+};
 
-const ResumeContext = createContext(initialState)
+const ResumeContext = createContext(initialState);
 
 function ResumeComponent({ children }: PropsWithChildren) {
-  const { user } = useAuth()
-  const [resumes, setResumes] = useState<T[]>([])
+  const { user } = useAuth();
+  const [resumes, setResumes] = useState<T[]>([]);
 
-  const [resume, setResume] = useState(initialState.resume)
+  const [resume, setResume] = useState(initialState.resume);
   const onChangeR = useCallback((target: keyof T, value: any) => {
-    setResume((prev) => ({ ...prev, [target]: value }))
-  }, [])
-  const [payload, setPayload] = useState<null | T>(null)
+    setResume((prev) => ({ ...prev, [target]: value }));
+  }, []);
+  const [payload, setPayload] = useState<null | T>(null);
 
   const fetchResumes = useCallback(async (uid: string) => {
-    const res = await fetch(`/api/resumes?uid=${uid}`)
-    const data = (await res.json()) as Resume[]
+    const res = await fetch(`/api/resumes?uid=${uid}`);
+    const data = (await res.json()) as Resume[];
 
-    console.log(data)
-    return data ?? []
-  }, [])
+    return data ?? [];
+  }, []);
 
   useEffect(() => {
     if (user) {
-      fetchResumes(user.id).then((fetchedResumes) => setResumes(fetchedResumes))
+      fetchResumes(user.id).then((fetchedResumes) =>
+        setResumes(fetchedResumes)
+      );
     }
-  }, [user])
+  }, [user]);
 
   useEffect(() => {
     if (payload) {
-      setResume(payload)
+      setResume(payload);
     }
-  }, [payload])
+  }, [payload]);
   return (
     <ResumeContext.Provider
       value={{
@@ -77,12 +84,12 @@ function ResumeComponent({ children }: PropsWithChildren) {
     >
       {children}
     </ResumeContext.Provider>
-  )
+  );
 }
 
-ResumeComponent.Context = ResumeContext
-ResumeComponent.initialState = initialState
-ResumeComponent.Form = RForm
-ResumeComponent.List = RList
+ResumeComponent.Context = ResumeContext;
+ResumeComponent.initialState = initialState;
+ResumeComponent.Form = RForm;
+ResumeComponent.List = RList;
 
-export default ResumeComponent
+export default ResumeComponent;
